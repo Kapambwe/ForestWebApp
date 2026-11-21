@@ -366,3 +366,21 @@ export function initializeReforestationMap(mapId, sitesData, centerLat, centerLn
         return false;
     }
 }
+
+if (typeof window !== 'undefined') {
+    window.leafletMap = {
+        icons,
+        initialize,
+        addMarker,
+        addMarkers,
+        addPolygon,
+        clearMarkers,
+        clearPolygons,
+        fitBounds,
+        setView,
+        invalidateSize,
+        initializeConservationMap,
+        initializeForestBoundaryMap,
+        initializeReforestationMap
+    };
+}
